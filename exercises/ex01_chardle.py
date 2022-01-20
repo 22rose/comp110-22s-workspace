@@ -12,30 +12,30 @@ if len(single_character) != 1:
     exit()
 print("Searching for " + single_character + " in " + five_character_word)
 
-counting_variable: int = 0 
+counting_variable_for_instances: int = 0 
 
 if single_character == five_character_word[0]:
     print(single_character + " found at index 0")
-    counting_variable = counting_variable + 1
+    counting_variable_for_instances = counting_variable_for_instances + 1 
 if single_character == five_character_word[1]:
     print(single_character + " found at index 1")
-    counting_variable = counting_variable + 1
+    counting_variable_for_instances = counting_variable_for_instances + 1
 if single_character == five_character_word[2]:
     print(single_character + " found at index 2")
-    counting_variable = counting_variable + 1
+    counting_variable_for_instances = counting_variable_for_instances + 1
 if single_character == five_character_word[3]:
     print(single_character + " found at index 3")
-    counting_variable = counting_variable + 1
+    counting_variable_for_instances = counting_variable_for_instances + 1
 if single_character == five_character_word[4]:
     print(single_character + " found at index 4")
-    counting_variable = counting_variable + 1
-if counting_variable > 1:
-    print(str(counting_variable) + " instances of " + single_character + " found in " + five_character_word)
+    counting_variable_for_instances = counting_variable_for_instances + 1
+if counting_variable_for_instances > 1:
+    print(str(counting_variable_for_instances) + " instances of " + single_character + " found in " + five_character_word)
 else:
-    if counting_variable == 1:
-        print(str(counting_variable) + " instance of " + single_character + " found in " + five_character_word)
+    if counting_variable_for_instances == 1:
+        print(str(counting_variable_for_instances) + " instance of " + single_character + " found in " + five_character_word)
     else:
-        if counting_variable == 0:
+        if counting_variable_for_instances == 0:
             print("No instances of " + single_character + ' found in ' + five_character_word)
     
                 

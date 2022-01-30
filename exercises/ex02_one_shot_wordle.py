@@ -9,7 +9,7 @@ while len(guess) != len(secret):
     guess = input("That was not 6 letters! Try again: ")  # if the user doesn't have 6 characters, we prompt them for another
 
 WHITE_BOX: str = "\U00002B1C"
-GREEN_BOX: str = "\U0001F9E9"
+GREEN_BOX: str = "\U0001F7E9"
 YELLOW_BOX: str = "\U0001F7E8"
 
 i: int = 0

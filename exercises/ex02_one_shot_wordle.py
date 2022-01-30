@@ -3,10 +3,10 @@
 __author__ = "730480585"
 
 secret: str = "python"
-guess: str = input("What is your 6-letter guess? ")  # we initially ask user for input
+guess: str = input(f"What is your {len(secret)}-letter guess? ")  # we initially ask user for input
 
 while len(guess) != len(secret):
-    guess = input("That was not 6 letters! Try again: ")  # if the user doesn't have 6 characters, we prompt them for another
+    guess = input(f"That was not {len(secret)} letters! Try again: ")  # if the user doesn't have 6 characters, we prompt them for another
 
 WHITE_BOX: str = "\U00002B1C"
 GREEN_BOX: str = "\U0001F7E9"
@@ -32,9 +32,7 @@ while i < len(secret):     # while the index int is less than the length of our 
     i = i + 1
 print(result)
 
-winning_msg: str = "Woo! You got it!"
-try_again_msg: str = "Not quite. Play again soon!"
 if guess != secret:     # we print a game over comment if the input is the appropriate length but not the secret
-    print(f"{try_again_msg}")
+    print("Not quite. Play again soon!")
 else:
-    print(f"{winning_msg}")  # we print a winning comment if they input the secret
+    print("Woo! You got it!")  # we print a winning comment if they input the secret

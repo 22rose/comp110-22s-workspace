@@ -51,18 +51,19 @@ def main() -> None:
     """Establish secret word, keep track of turns, whether user has won, and control flow of game."""
     secret_word: str = "codes"
     turn: int = 1  # we start at 1 cause 1 is the first turn
-    while turn < 7:  # since we have 6 turns, we make it less than 7
+    won: bool = False
+    while turn <= 6 and not won:  # since we have 6 turns, we make it less than or equl to 6
         print(f"=== Turn {turn}/6 ===")
         guess = input_guess(len(secret_word))  # we collect guess and return that as a string of emojis using emojified function
-        emojis: str = emojified(guess, secret_word)
+        emojis = emojified(guess, secret_word)
         print(emojis)
         if guess == secret_word:  # if guess is the same as secret, we print winning comment and how many turns it took
             print(f"you won in {turn}/6 turns!")
-            quit()
-        turn = turn + 1  # we keep increasing turns
-    print("X/6 - Sorry, try again tomorrow!")
-    quit()
-
+            won = True
+        turn = turn + 1
+        if turn == 7:
+            print("X/6 - Sorry, try again tomorrow!")
+    
 
 if __name__ == "__main__":
     main()   
